@@ -13,7 +13,7 @@ class Chatbox {
        this.messages = []; // array to store msgs
    }
     display() {
-     const {openButton, chatBox, sendButton} = this.args;
+     const {openButton, chatBox, sendButton, closeButton} = this.args;
      const key = "";
      openButton.addEventListener('click',listener => this.toggleState(chatBox))
      closeButton.addEventListener('click',listener => this.toggleState(chatBox))
