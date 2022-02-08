@@ -41,8 +41,9 @@ class Chatbox {
       if(this.state) {
 
         chatbox.classList.add('chatbox--active')
-        this.messages.push("مرحبا بك! أنا فريدة مساعدتك الافتراضية ، كيف يمكنني مساعدتك");
-       this.updateChatText(chatbox)
+        const chatmessage = chatbox.querySelector('.chatbox__messages');
+        chatmessage.innerHTML = '<div class="messages__item messages__item--visitor">' + "مرحبا بك" + '</div>'
+
       } else {
           chatbox.classList.remove('chatbox--active')
       }
@@ -100,6 +101,7 @@ class Chatbox {
        });
       const chatmessage = chatbox.querySelector('.chatbox__messages');
        chatmessage.innerHTML = html;
+       
    }
 }
 
