@@ -259,6 +259,7 @@ margin: 7%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     box-shadow: var(--primaryBoxShadow);
+    overflow: hidden;
 }
 
 .chatbox__image--header {
