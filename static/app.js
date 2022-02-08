@@ -6,17 +6,16 @@ class Chatbox {
            openButton: document.querySelector('.chatbox__button'),
            chatBox: document.querySelector('.chatbox__support'),
            sendButton: document.querySelector('.send__button'),
-           closeButton: document.querySelector('chatbox__image--header')
+           
        }
 
        this.state = false; // chatbot is closed
        this.messages = []; // array to store msgs
    }
     display() {
-     const {openButton, chatBox, sendButton, closeButton} = this.args;
+     const {openButton, chatBox, sendButton} = this.args;
      const key = "";
      openButton.addEventListener('click',listener => this.toggleState(chatBox))
-     closeButton.addEventListener('click',listener => this.toggleState(chatBox))
      sendButton.addEventListener('click',listener => this.onSendButton(chatBox))
     // const node = chatBox.querySelector('input');
     // node.addEventListener("keypress",({key:string})=> {
@@ -64,6 +63,9 @@ class Chatbox {
        this.messages.push(msg1);
        this.updateChatText(chatbox)
     textField.value = ''
+ 
+    document.getElementById("loading").style.visibility = "visible"; 
+
 
        fetch($SCRIPT_ROOT + '/predict', {
            method: 'POST',
@@ -79,6 +81,9 @@ class Chatbox {
    .then(r =>{
     let msg2 = { name:"فريدة", message: r.answer};
     this.messages.push(msg2)
+
+    document.getElementById("loading").style.visibility = "hidden"; 
+    
     this.updateChatText(chatbox)
     textField.value = ''
    }).catch((error) => {
