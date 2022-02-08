@@ -64,7 +64,7 @@ class Chatbox {
        this.updateChatText(chatbox)
     textField.value = ''
  
-html = '<div class="chat-bubble" id="loading"><div class="typing"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div>'
+var html = '<div class="chat-bubble" id="loading"><div class="typing"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div>'
 const chatmessage = chatbox.querySelector('.chatbox__messages');
        chatmessage.innerHTML = html;
 
