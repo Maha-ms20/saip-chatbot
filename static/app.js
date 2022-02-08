@@ -43,7 +43,7 @@ class Chatbox {
         chatbox.classList.add('chatbox--active')
         const chatmessage = chatbox.querySelector('.chatbox__messages');
         chatmessage.innerHTML = '<div class="messages__item messages__item--visitor">' + "مرحبا بك" + '</div>'
-
+        document.getElementById("cb").style.visibility = "hidden"; 
       } else {
           chatbox.classList.remove('chatbox--active')
       }
