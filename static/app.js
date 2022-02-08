@@ -66,7 +66,7 @@ class Chatbox {
  
 var html = '<div class="chat-bubble" id="loading"><div class="typing"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div>'
 const chatmessage = chatbox.querySelector('.chatbox__messages');
-       chatmessage.innerHTML = html;
+       chatmessage.innerHTML += html;
 
        fetch($SCRIPT_ROOT + '/predict', {
            method: 'POST',
