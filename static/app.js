@@ -1,6 +1,4 @@
-{ 
-    var html = "";
- } 
+
 class Chatbox {
   
    constructor() {
@@ -56,14 +54,10 @@ class Chatbox {
        if (text1 === "") {
            return;
        }
-
-       
-       html += '<div class="messages__item messages__item--operator">' + text1 + '</div>'
-       const chatmessage = chatbox.querySelector('.chatbox__messages');
-       chatmessage.innerHTML = html;
-
        let msg1 = { name:"user", message: text1 }
        this.messages.push(msg1);
+       this.updateChatText(chatbox)
+    textField.value = ''
 
        fetch($SCRIPT_ROOT + '/predict', {
            method: 'POST',
@@ -91,7 +85,7 @@ class Chatbox {
    }
 
    updateChatText(chatbox) {
-       
+       var html = " ";
        this.messages.slice().reverse().forEach(function(item, ) {
          if (item.name === "فريدة")
          {
