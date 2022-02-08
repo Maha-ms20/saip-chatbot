@@ -91,7 +91,7 @@ class Chatbox {
    }
 
    updateChatText(chatbox) {
-       var html = '';
+       
        this.messages.slice().reverse().forEach(function(item, ) {
          if (item.name === "فريدة")
          {
