@@ -241,11 +241,14 @@ margin: 7%;
 
 .chatbox__support {
     background: #f9f9f9;
-    height: 450px;
+    height: 400px;
     width: 350px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    float: right;
 }
 
 /* HEADER */
@@ -255,15 +258,15 @@ margin: 7%;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 15px 20px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     box-shadow: var(--primaryBoxShadow);
-    overflow: hidden;
+    
 }
 
 .chatbox__image--header {
     margin-right: 10px;
+    float: right;
 }
 
 .chatbox__heading--header {
