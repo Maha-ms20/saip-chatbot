@@ -336,4 +336,6 @@ margin-right:2em;
 border: 2px solid #555;
 background: #D8D5D5;
 border-radius: 100px;
+position: sticky;
+
 }

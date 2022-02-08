@@ -53,6 +53,11 @@ class Chatbox {
            return;
        }
 
+
+       html += '<div class="messages__item messages__item--operator">' + text1 + '</div>'
+       const chatmessage = chatbox.querySelector('.chatbox__messages');
+       chatmessage.innerHTML = html;
+       
        let msg1 = { name:"user", message: text1 }
        this.messages.push(msg1);
 
@@ -93,7 +98,7 @@ class Chatbox {
 
 
        });
-       const chatmessage = chatbox.querySelector('.chatbox__messages');
+     //  const chatmessage = chatbox.querySelector('.chatbox__messages');
        chatmessage.innerHTML = html;
    }
 }
