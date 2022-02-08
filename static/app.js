@@ -97,7 +97,7 @@ class Chatbox {
 
        });
       const chatmessage = chatbox.querySelector('.chatbox__messages');
-       chatmessage.innerHTML += html;
+       chatmessage.innerHTML = html;
    }
 }
 
