@@ -95,7 +95,7 @@ class Chatbox {
        this.messages.slice().reverse().forEach(function(item, ) {
          if (item.name === "فريدة")
          {
-             html = '<div class="messages__item messages__item--visitor">' + item.message + '</div>'
+             html += '<div class="messages__item messages__item--visitor">' + item.message + '</div>'
          } //else {
            // html += '<div class="messages__item messages__item--operator">' + item.message + '</div>'
         // }
