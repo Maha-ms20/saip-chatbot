@@ -68,7 +68,7 @@ var  html = '<div class="messages__item messages__item--visitor" style="display:
 const chatmessage = chatbox.querySelector('.chatbox__messages');
 
       html += chatmessage.innerHTML;
-     
+      chatmessage.innerHTML = html; 
       
 
        fetch($SCRIPT_ROOT + '/predict', {
