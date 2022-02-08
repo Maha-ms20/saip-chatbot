@@ -64,11 +64,10 @@ class Chatbox {
        this.updateChatText(chatbox)
     textField.value = ''
  
-var html = '<div class="chat-bubble" id="loading"><div class="typing"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div>'
+var  html = '<div class="messages__item messages__item--visitor"><div class="chat-bubble" id="loading"><div class="typing"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div></div>'
 const chatmessage = chatbox.querySelector('.chatbox__messages');
-this.messages.push(html);
-this.messages.slice().reverse(); 
        chatmessage.innerHTML = html;
+      
 
        fetch($SCRIPT_ROOT + '/predict', {
            method: 'POST',
