@@ -41,6 +41,8 @@ class Chatbox {
       if(this.state) {
 
         chatbox.classList.add('chatbox--active')
+        this.messages.push("مرحبا بك! أنا فريدة مساعدتك الافتراضية ، كيف يمكنني مساعدتك");
+       this.updateChatText(chatbox)
       } else {
           chatbox.classList.remove('chatbox--active')
       }
