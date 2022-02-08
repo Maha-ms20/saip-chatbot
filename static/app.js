@@ -1,4 +1,8 @@
+{ 
+    var html = "";
+ } 
 class Chatbox {
+  
    constructor() {
        this.args = {
            openButton: document.querySelector('.chatbox__button'),
@@ -45,7 +49,7 @@ class Chatbox {
 
 
    }
-
+   
    onSendButton(chatbox) {
        var textField = chatbox.querySelector('input'); // extract user input
        let text1 = textField.value
@@ -53,7 +57,7 @@ class Chatbox {
            return;
        }
 
-       var html = '';
+       
        html += '<div class="messages__item messages__item--operator">' + text1 + '</div>'
        const chatmessage = chatbox.querySelector('.chatbox__messages');
        chatmessage.innerHTML = html;
