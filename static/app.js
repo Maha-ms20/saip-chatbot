@@ -14,15 +14,20 @@ class Chatbox {
      const key = "";
      openButton.addEventListener('click',listener => this.toggleState(chatBox))
      sendButton.addEventListener('click',listener => this.onSendButton(chatBox))
-     const node = chatBox.querySelector('input');
-     node.addEventListener("keypress",({key:string})=> {
+    // const node = chatBox.querySelector('input');
+    // node.addEventListener("keypress",({key:string})=> {
 
-       if (key==="Enter") {
-        document.getElementById("send").click();
-         }
+      // if (key==="Enter") {
+       // document.getElementById("send").click();
+       //  }
+       document.getElementById("textbox").addEventListener("keyup", function(event) {
+       event.preventDefault();
+       if (event.keyCode === 13) {
+           document.getElementById("send").click();
+       }
+   });
 
-
-     })
+    // })
 
 
 
