@@ -5,7 +5,8 @@ class Chatbox {
        this.args = {
            openButton: document.querySelector('.chatbox__button'),
            chatBox: document.querySelector('.chatbox__support'),
-           sendButton: document.querySelector('.send__button')
+           sendButton: document.querySelector('.send__button'),
+           closeButton: document.querySelector('chatbox__image--header')
        }
 
        this.state = false; // chatbot is closed
@@ -15,6 +16,7 @@ class Chatbox {
      const {openButton, chatBox, sendButton} = this.args;
      const key = "";
      openButton.addEventListener('click',listener => this.toggleState(chatBox))
+     closeButton.addEventListener('click',listener => this.toggleState(chatBox))
      sendButton.addEventListener('click',listener => this.onSendButton(chatBox))
     // const node = chatBox.querySelector('input');
     // node.addEventListener("keypress",({key:string})=> {
@@ -46,6 +48,7 @@ class Chatbox {
         document.getElementById("cb").style.visibility = "hidden"; 
       } else {
           chatbox.classList.remove('chatbox--active')
+          document.getElementById("cb").style.visibility = "visible"; 
       }
 
 
