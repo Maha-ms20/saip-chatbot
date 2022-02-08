@@ -64,8 +64,9 @@ class Chatbox {
        this.updateChatText(chatbox)
     textField.value = ''
  
-    document.getElementById("loading").style.visibility = "visible"; 
-
+html = '<div class="chat-bubble" id="loading"><div class="typing"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div>'
+const chatmessage = chatbox.querySelector('.chatbox__messages');
+       chatmessage.innerHTML = html;
 
        fetch($SCRIPT_ROOT + '/predict', {
            method: 'POST',
@@ -82,8 +83,6 @@ class Chatbox {
     let msg2 = { name:"فريدة", message: r.answer};
     this.messages.push(msg2)
 
-    document.getElementById("loading").style.visibility = "hidden"; 
-    
     this.updateChatText(chatbox)
     textField.value = ''
    }).catch((error) => {
@@ -108,7 +107,7 @@ class Chatbox {
 
        });
       const chatmessage = chatbox.querySelector('.chatbox__messages');
-       chatmessage.innerHTML += html;
+       chatmessage.innerHTML = html;
        
    }
 }
