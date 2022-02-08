@@ -53,11 +53,11 @@ class Chatbox {
            return;
        }
 
-
+       var html = '';
        html += '<div class="messages__item messages__item--operator">' + text1 + '</div>'
        const chatmessage = chatbox.querySelector('.chatbox__messages');
        chatmessage.innerHTML = html;
-       
+
        let msg1 = { name:"user", message: text1 }
        this.messages.push(msg1);
 
